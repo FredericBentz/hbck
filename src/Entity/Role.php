@@ -1,0 +1,80 @@
+<?php
+
+namespace App\Entity;
+
+use App\Repository\RoleRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass=RoleRepository::class)
+ */
+class Role
+{
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $label;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=User::class, mappedBy="role_id")
+     */
+    private $user_id;
+
+    public function __construct()
+    {
+        $this->user_id = new ArrayCollection();
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getLabel(): ?string
+    {
+        return $this->label;
+    }
+
+    public function setLabel(string $label): self
+    {
+        $this->label = $label;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getUserId(): Collection
+    {
+        return $this->user_id;
+    }
+
+    public function addUserId(User $userId): self
+    {
+        if (!$this->user_id->contains($userId)) {
+            $this->user_id[] = $userId;
+            $userId->addRoleId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUserId(User $userId): self
+    {
+        if ($this->user_id->removeElement($userId)) {
+            $userId->removeRoleId($this);
+        }
+
+        return $this;
+    }
+}
