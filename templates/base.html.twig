@@ -5,6 +5,8 @@
         <title>{% block title %}Entente Mulhouse Kingersheim - EMK{% endblock %}</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{{ asset('stylesheet/general_style.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('stylesheet/team_style.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('stylesheet/club_style.css') }}" />
         {% block stylesheets %}{% endblock %}
         <title>Entente Mulhouse Kingersheim</title>
     </head>
@@ -14,9 +16,6 @@
     </header>
        
         
-    <footer class="page-header">
-        {% include 'components/footer.html.twig' %}
-    </footer>
 
         {% block body %}{% endblock %}
 
@@ -25,6 +24,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cssmapsplugin.com/5/jquery.cssmap.min.js"></script>
+<script src="{{ asset('scripts/team.js') }}"></script>
+<script src="{{ asset('scripts/club.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
