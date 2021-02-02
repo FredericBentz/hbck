@@ -11,3 +11,8 @@ home:
 club: 
     path: /club
     controller: App\Controller\HomeController::clubAction
+
+# page equipes
+team:
+    path: /equipes
+    controller: App\Controller\TeamController::homeAction
