@@ -71,6 +71,11 @@ class User implements UserInterface, \Serializable
      */
     private $suspended_id;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $password;
+
     public function __construct()
     {
         $this->role_id = new ArrayCollection();
@@ -304,6 +309,13 @@ class User implements UserInterface, \Serializable
                 $suspendedId->setUserId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
 
         return $this;
     }
