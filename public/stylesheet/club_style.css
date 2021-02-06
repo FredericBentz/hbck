@@ -6,6 +6,7 @@ html, body {
 }
 
 body {
+
   font-family: "Roboto Slab", serif;
   color: #000;
   margin: 0;
@@ -49,7 +50,7 @@ body {
   height: 100%;
   background-position: center;
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
   transition: all 0.8s ease;
 }
 .container-general .gallery-wrap .item:hover {
@@ -67,7 +68,7 @@ body {
   background-image: url("https://ententemulhousehandball.files.wordpress.com/2020/05/photo-2.jpg");
 }
 .wrap-effect-3 .item:nth-of-type(2) {
-  background-image: url("https://ententemulhousehandball.files.wordpress.com/2020/01/ancien-maillot-entente.jpg");
+  background-image: url("https://ententemulhousehandball.files.wordpress.com/2020/05/photo-3.jpg");
 }
 .wrap-effect-3 .item:nth-of-type(3) {
   background-image: url("https://ententemulhousehandball.files.wordpress.com/2020/03/img_8340.jpg?w=574&h=&zoom=2");

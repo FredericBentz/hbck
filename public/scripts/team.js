@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 $(".option").click(function(){
     $(".option").removeClass("active");
     $(this).addClass("active");
@@ -38,3 +40,5 @@ $(".option").click(function(){
      $slider.eq(i + 1).stop().animate({left: start + (indexWidth * (i - num))}, duration, 'swing');
    }
  });
+
+});

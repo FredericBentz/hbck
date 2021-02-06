@@ -78,11 +78,14 @@ class User implements UserInterface, \Serializable
      */
     private $password;
 
+<<<<<<< HEAD
     /**
      * @ORM\Column(type="boolean")
      */
     private $isVerified = false;
 
+=======
+>>>>>>> origin/dev
     public function __construct()
     {
         $this->role_id = new ArrayCollection();
@@ -326,6 +329,7 @@ class User implements UserInterface, \Serializable
 
         return $this;
     }
+<<<<<<< HEAD
 
     public function isVerified(): bool
     {
@@ -338,4 +342,6 @@ class User implements UserInterface, \Serializable
 
         return $this;
     }
+=======
+>>>>>>> origin/dev
 }
