@@ -1,3 +1,18 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+# page home
+home:
+    path: /
+    controller: App\Controller\HomeController::homeAction
+
+# page club
+club: 
+    path: /club
+    controller: App\Controller\HomeController::clubAction
+
+# page equipes
+team:
+    path: /equipes
+    controller: App\Controller\TeamController::homeAction
