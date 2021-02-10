@@ -29,6 +29,17 @@ class League
      */
     private $matchHandball_id;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Level::class, inversedBy="leagues")
+     */
+    private $level;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=category::class, inversedBy="leagues")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $category;
+
     public function __construct()
     {
         $this->matchHandball_id = new ArrayCollection();
@@ -77,6 +88,30 @@ class League
                 $matchHandballId->setLeagueId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getLevel(): ?Level
+    {
+        return $this->level;
+    }
+
+    public function setLevel(?Level $level): self
+    {
+        $this->level = $level;
+
+        return $this;
+    }
+
+    public function getCategory(): ?category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }
