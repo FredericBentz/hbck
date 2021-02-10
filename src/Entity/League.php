@@ -40,6 +40,11 @@ class League
      */
     private $category;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $id_ffh;
+
     public function __construct()
     {
         $this->matchHandball_id = new ArrayCollection();
@@ -112,6 +117,18 @@ class League
     public function setCategory(?category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getIdFfh(): ?string
+    {
+        return $this->id_ffh;
+    }
+
+    public function setIdFfh(?string $id_ffh): self
+    {
+        $this->id_ffh = $id_ffh;
 
         return $this;
     }
