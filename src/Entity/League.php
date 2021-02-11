@@ -35,7 +35,7 @@ class League
     private $level;
 
     /**
-     * @ORM\ManyToOne(targetEntity=category::class, inversedBy="leagues")
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="leagues")
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;
