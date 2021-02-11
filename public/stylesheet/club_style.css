@@ -20,24 +20,40 @@ body {
   padding: 10px;
 }
 
-.swiper-container {
-  width: 100%;
+.swiper-container .mainbody {
+
   height: 90%;
 }
 
+.swiper-container  {
+  border: 10px chartreuse solid;
+  width: 80%;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  
+
+}
+
 .swiper-slide {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
-  background: #fff;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 80%;
 }
 
 .container-general {
+
   padding: 75px 0;
   margin: 0 auto;
-  width: 800px;
+  width:100%;
+
 }
 .container-general .gallery-wrap {
   display: flex;
@@ -68,7 +84,7 @@ body {
   background-image: url("https://ententemulhousehandball.files.wordpress.com/2020/05/photo-2.jpg");
 }
 .wrap-effect-3 .item:nth-of-type(2) {
-  background-image: url("https://ententemulhousehandball.files.wordpress.com/2020/01/ancien-maillot-entente.jpg");
+  background-image: url("https://ententemulhousehandball.files.wordpress.com/2020/05/photo-3.jpg");
 }
 .wrap-effect-3 .item:nth-of-type(3) {
   background-image: url("https://ententemulhousehandball.files.wordpress.com/2020/03/img_8340.jpg?w=574&h=&zoom=2");
@@ -147,3 +163,4 @@ body {
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
 }
+
