@@ -88,9 +88,10 @@ class Category
     }
 
 
-    public function __toString(){   
+    public function __toString()
+    {
         return $this->label;
-
+    }
     /**
      * @return Collection|League[]
      */
