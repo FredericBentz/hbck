@@ -17,6 +17,7 @@ team:
     path: /equipes
     controller: App\Controller\TeamController::homeAction
 
-
-
+dashboard:
+    path: /admin
+    controller: App\Controller\Admin\DashboardController::index
 

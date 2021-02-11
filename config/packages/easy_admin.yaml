@@ -1,0 +1,15 @@
+easy_admin:
+    entities:
+        # change the following to the namespaces of your own entities
+        - App\Entity\User
+        - App\Entity\Season
+        - App\Entity\League
+        - App\Entity\MatchHandball
+        - App\Entity\Category
+        - App\Entity\Team
+        - App\Entity\Role
+        - App\Entity\Injury
+        - App\Entity\Suspended
+        
+       
+        
