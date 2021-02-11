@@ -5,10 +5,15 @@
 }
 .mainbody
 {
-    background-color: #e0e0e0;
-    background: linear-gradient(to right, #ffce54 10%, #FFFFFF 10%, #FFFFFF 90%, #ffce54 90%);
+    background-color: #ffce54;
+
 
 }
+
+.container {
+    background-color: #FFFFFF;
+}
+
 
 .d-block{
     padding: 5px;
@@ -27,7 +32,7 @@
 }
 main
 {
-    <!-- -->
+
     margin-left: auto;
     margin-right: auto;
     width: 80%;

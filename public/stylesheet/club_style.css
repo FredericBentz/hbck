@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-<!-- -->
+
   font-family: "Roboto Slab", serif;
   color: #000;
   margin: 0;
@@ -27,7 +27,7 @@ body {
 }
 
 .swiper-container  {
-  border: 10px chartreuse solid;
+
   width: 80%;
   position: relative;
   margin-right: auto;
@@ -46,7 +46,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  width: 80%;
+
 }
 
 .container-general {
