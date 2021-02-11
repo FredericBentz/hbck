@@ -154,12 +154,20 @@
         let elements = document.querySelectorAll(".option");
         for (let i = 0; i < elements.length; i++) {
             let opt =elements[i];
+            let com;
             opt.onclick = function(){
 
 
                 if(opt.className=='option')
                 {
                     opt.className='option active';
+                    for(let j=0;j<elements.length;j++){
+                        com=elements[j];
+                        if (com!=opt){
+                            com.style.visibility ='hidden';
+                        }
+                    }
+
                 }else if(opt.className=='option active')
                 {
                     opt.className='option';
