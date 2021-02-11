@@ -71,10 +71,15 @@ class Role
 
     public function removeUserId(User $userId): self
     {
-        if ($this->user_id->removeElement($userId)) {
+        if ($this->user_id->contains($userId)) {
+            $this->user_id->removeElement($userId);
             $userId->removeRoleId($this);
         }
 
         return $this;
+    }
+
+    public function __toString(){   
+        return $this->label;
     }
 }

@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 <div class="options container">
-   <div class="option active" style="--optionBackground:url(https://ententemulhousehandball.files.wordpress.com/2020/03/img_8340.jpg?w=574&h=&zoom=2);">
+   <div id="BH"  class="option active" style="--optionBackground:url(https://ententemulhousehandball.files.wordpress.com/2020/03/img_8340.jpg?w=574&h=&zoom=2);">
       <div class="shadow"></div>
       <div class="label">
          <div class="icon">
@@ -149,5 +149,24 @@
   </div>
   
 </div>
+    <script>
 
+        let elements = document.querySelectorAll(".option");
+        for (let i = 0; i < elements.length; i++) {
+            let opt =elements[i];
+            opt.onclick = function(){
+
+
+                if(opt.className=='option')
+                {
+                    opt.className='option active';
+                }else if(opt.className=='option active')
+                {
+                    opt.className='option';
+
+
+                }
+            };
+        }
+    </script>
 {% endblock %}
