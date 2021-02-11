@@ -20,24 +20,41 @@ body {
   padding: 10px;
 }
 
-.swiper-container {
-  width: 100%;
+.swiper-container .mainbody {
+
+  height: 90%;
+
+}
+
+.swiper-container  {
+
+  width: 80%;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  
 
 }
 
 .swiper-slide {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
-  background: #fff;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+
+
 }
 
 .container-general {
+
   padding: 75px 0;
   margin: 0 auto;
-  width: 800px;
+  width:100%;
+
 }
 .container-general .gallery-wrap {
   display: flex;
@@ -147,3 +164,4 @@ body {
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
 }
+
