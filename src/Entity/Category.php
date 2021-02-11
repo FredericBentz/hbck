@@ -29,9 +29,15 @@ class Category
      */
     private $team_id;
 
+    /**
+     * @ORM\OneToMany(targetEntity=League::class, mappedBy="category")
+     */
+    private $leagues;
+
     public function __construct()
     {
         $this->team_id = new ArrayCollection();
+        $this->leagues = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -81,8 +87,17 @@ class Category
         return $this;
     }
 
+
     public function __toString(){   
         return $this->label;
+
+    /**
+     * @return Collection|League[]
+     */
+    public function getLeagues(): Collection
+    {
+        return $this->leagues;
     }
+    
 }
 
