@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 const swiper = new Swiper('.swiper-container', {
     direction: 'vertical',
     mousewheel: {},
@@ -7,3 +9,4 @@ const swiper = new Swiper('.swiper-container', {
       onlyInViewport: false
     }
   });
+});

@@ -43,9 +43,9 @@ class Suspended
      */
     private $match_id_end;
 
-    public function getIs(): ?int
+    public function getId(): ?int
     {
-        return $this->is;
+        return $this->id;
     }
 
     public function getNbGame(): ?int

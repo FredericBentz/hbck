@@ -12,6 +12,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\Table(name="`user`")
+ * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  * @UniqueEntity(fields={"password"}, message="There is already an account with this password")
  */
 class User implements UserInterface, \Serializable
@@ -78,6 +79,12 @@ class User implements UserInterface, \Serializable
      */
     private $password;
 
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isVerified = false;
+
     public function __construct()
     {
         $this->role_id = new ArrayCollection();
@@ -104,6 +111,9 @@ class User implements UserInterface, \Serializable
 
     public function getRoles()
     {
+        if ($this->getEmail() == "admin@gmail.com"){
+            return array('ROLE_ADMIN');
+        }
         return array('ROLE_USER');
     }
 
@@ -320,5 +330,22 @@ class User implements UserInterface, \Serializable
         $this->password = $password;
 
         return $this;
+    }
+
+
+    public function isVerified(): bool
+    {
+        return $this->isVerified;
+    }
+
+    public function setIsVerified(bool $isVerified): self
+    {
+        $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    public function __toString(){   
+        return $this->firstName;
     }
 }

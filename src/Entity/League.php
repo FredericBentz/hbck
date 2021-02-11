@@ -97,6 +97,10 @@ class League
         return $this;
     }
 
+
+    public function __toString(){   
+        return $this->label;
+
     public function getLevel(): ?Level
     {
         return $this->level;

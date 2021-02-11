@@ -87,6 +87,10 @@ class Category
         return $this;
     }
 
+
+    public function __toString(){   
+        return $this->label;
+
     /**
      * @return Collection|League[]
      */
@@ -94,26 +98,6 @@ class Category
     {
         return $this->leagues;
     }
-
-    public function addLeague(League $league): self
-    {
-        if (!$this->leagues->contains($league)) {
-            $this->leagues[] = $league;
-            $league->setCategory($this);
-        }
-
-        return $this;
-    }
-
-    public function removeLeague(League $league): self
-    {
-        if ($this->leagues->removeElement($league)) {
-            // set the owning side to null (unless already changed)
-            if ($league->getCategory() === $this) {
-                $league->setCategory(null);
-            }
-        }
-
-        return $this;
-    }
+    
 }
+
