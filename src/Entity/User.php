@@ -78,14 +78,12 @@ class User implements UserInterface, \Serializable
      */
     private $password;
 
-<<<<<<< HEAD
+
     /**
      * @ORM\Column(type="boolean")
      */
     private $isVerified = false;
 
-=======
->>>>>>> origin/dev
     public function __construct()
     {
         $this->role_id = new ArrayCollection();
@@ -112,6 +110,9 @@ class User implements UserInterface, \Serializable
 
     public function getRoles()
     {
+        if ($this->getEmail() == "admin@gmail.com"){
+            return array('ROLE_ADMIN');
+        }
         return array('ROLE_USER');
     }
 
@@ -329,7 +330,7 @@ class User implements UserInterface, \Serializable
 
         return $this;
     }
-<<<<<<< HEAD
+
 
     public function isVerified(): bool
     {
@@ -342,6 +343,8 @@ class User implements UserInterface, \Serializable
 
         return $this;
     }
-=======
->>>>>>> origin/dev
+
+    public function __toString(){   
+        return $this->firstName;
+    }
 }
