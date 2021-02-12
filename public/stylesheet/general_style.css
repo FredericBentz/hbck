@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-.mainbody
+body
 {
     background-color: #ffce54;
 
@@ -30,9 +30,9 @@
     text-align: center;
 
 }
+
 main
 {
-
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -59,22 +59,28 @@ article
     flex-direction: row;
 
 }
-.actu
-{
-    padding: 50px;
-    position: relative;
-    overflow: hidden;
+
+.page-footer{
+    background-color: #212529;
+    text-align: center;
+}
+
+.bg-co {
+    background-color: #ffce54;
+    padding: 0;
+    margin: 0;
 
 }
-.page-footer{
-    margin-top: 20px;
-    clear:both;
-    background-color: black;
-    color: #DDDDDD;
-    padding: 5px;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  
+.boxSha {
+    box-shadow: #212529 0 0 25px -2px;
+}
+
+.btn_personaliser {
+    background-color: #ffce54;
+    height: 100%;
+    color: white;
+}
+
+h4 {
+    color: #ffce54;
 }

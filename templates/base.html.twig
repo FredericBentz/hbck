@@ -17,20 +17,39 @@
         {% block stylesheets %}{% endblock %}
         <title>Entente Mulhouse Kingersheim</title>
     </head>
-    <body class=" mainbody">
+    <body>
     <div class="container">
-        <header class="page-header">
-            {% include 'components/navbar.html.twig' %}
-            <div class="connexion mr-5" style="text-indent: 1000px;">
-                {% if app.user %}
-                    <div class="ml-4 mt-4">Connecté en tant que : <a href="{{ path('dashboard') }}">{{ app.user.username }}</a></div>
-                {% else %}
-                    <div class="ml-4 mt-4">Vous n'etes pas connecté</div>
-                {% endif %}
-            </div>
-        </header>
+        <div class="row">
+             <header class="col-12">
+                 <div class="row">
+                     <div class="col-12">
+                        {% include 'components/navbar.html.twig' %}
 
-        {% block body %}{% endblock %}
+                     </div>
+                     <div class="col-12 m-0 p-0">
+                         <div class="connexion mr-5" style="text-indent: 1000px;">
+                            {% if app.user %}
+                                <div class="bg-co">Connecté en tant que : <a class="text-white text-bold text-transform-uppercase; text-decoration-none" href="{{ path('dashboard') }}">{{ app.user.username }}</a></div>
+                            {% else %}
+                                <div class="bg-co">Vous n'etes pas connecté</div>
+                            {% endif %}
+                        </div>
+                     </div>
+
+                 </div>
+                
+            </header>
+        </div>
+        <div class="row">
+            {% block body %}{% endblock %}
+             
+        </div>
+        <div class="row mt-5">
+             <footer  class="page-footer">
+                {% include 'components/footer.html.twig' %}
+             </footer>
+        </div>
+       
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -52,9 +71,7 @@
 
 
 
-        <footer  class="page-footer">
-            {% include 'components/footer.html.twig' %}
-        </footer>
+       
 
     </div>
 
